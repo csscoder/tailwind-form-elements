@@ -1,0 +1,15 @@
+{
+  "include": [
+    "./resources/**/*"
+  ],
+  "compilerOptions": {
+    "module": "es2015",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./resources/*"],
+      "~components/*": ["./resources/js/components/*"],
+      "~api/*": ["./resources/js/api/*"],
+      "~icons/*": ["./resources/svg-icons/*"]
+    }
+  }
+}

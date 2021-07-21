@@ -1,0 +1,65 @@
+{
+   "context": {
+      "label": "Button label",
+      "isLoading": false,
+      "isDisabled": false,
+      "size": "default",
+      "classes": {
+         "base": "inline-flex items-center no-underline transition leading-none select-none outline-none focus:outline-none relative",
+         "size": {
+            "small": "h-7 px-3 text-xs rounded-sm",
+            "default": "h-10 px-4 text-base rounded",
+            "large": "h-12 px-5 text-xl rounded-md"
+         },
+         "theme": {
+            "common": "border border-blue-400 text-blue-400",
+            "default": "focus:ring-2 ring-blue-400 ring-opacity-50 hover:bg-blue-400 active:bg-blue-500 hover:text-white active:translate-y-0.5",
+            "disabled": "cursor-not-allowed opacity-30",
+            "loading": "text-opacity-0 cursor-not-allowed after:border-r-transparent after:border-blue-400 after:animate-spin after:rounded-full after:w-4 after:h-4 after:left-1/2 after:top-1/2 after:block after:absolute after:border-2  after:-ml-2 after:-mt-2"
+         }
+      }
+   },
+   "variants": [
+      {
+         "name": "default",
+         "label": "Default style",
+         "context": {
+            "isLoading": false,
+            "isDisabled": false
+         }
+      },
+      {
+         "name": "loading",
+         "order": 2,
+         "label": "Loading style",
+         "context": {
+            "isLoading": true
+         }
+      },
+      {
+         "name": "disabled",
+         "label": "Disabled style",
+         "context": {
+            "isDisabled": true
+         }
+      },
+      {
+         "name": "sizeSM",
+         "label": "Size small",
+         "context": {
+            "size": "small"
+         }
+      },
+      {
+         "name": "sizeNormal",
+         "label": "Size normal"
+      },
+      {
+         "name": "sizeLG",
+         "label": "Size large",
+         "context": {
+            "size": "large"
+         }
+      }
+   ]
+}

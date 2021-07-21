@@ -1,0 +1,18 @@
+context:
+  inputs:
+    userName:
+      labelName: userName
+      itemLabel: User name
+      placeholder: Email
+      type: 'email'
+    userPassword:
+      labelName: userPassword
+      itemLabel: User password
+      placeholder: Password
+      type: 'password'
+
+  buttons:
+    success:
+      label: Login
+    cancel:
+      label: Cancel

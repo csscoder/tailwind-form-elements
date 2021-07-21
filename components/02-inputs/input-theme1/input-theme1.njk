@@ -1,0 +1,8 @@
+<div class="relative mb-6">
+  <label for="{{labelName}}" class="hidden">{{itemLabel}}</label>
+  <input id="{{labelName}}" type="{{type}}" placeholder="{{placeholder}}" {%if isDisabled%}readonly{%endif%}
+    class="{{classes.base}} {{classes.theme.common}} {% if isError%} {{classes.theme.error}} {% elif isDisabled %} {{classes.theme.disabled}} {% else %} {{classes.theme.default}} {% endif %} {% if size =='small' %} {{classes.size.small}} {% elif size =='large' %} {{classes.size.large}} {% else %} {{classes.size.default}} {% endif %} " />
+  <div class="absolute left-0 w-full pr-1 mt-1 text-xs leading-none text-right text-red-500 top-full">
+    <div {% if isError == false %}class="hidden" {% endif %}>Field is required</div>
+  </div>
+</div>

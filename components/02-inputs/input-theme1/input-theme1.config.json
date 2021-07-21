@@ -1,0 +1,92 @@
+{
+  "context": {
+     "isDisabled": false,
+     "isError": false,
+     "size": "default",
+     "type": "text",
+     "classes": {
+        "base": "w-full leading-none transition outline-none focus:outline-none flex items-center",
+        "size": {
+           "small": "h-7 px-3 text-xs rounded-sm",
+           "default": "h-10 px-4 text-base rounded",
+           "large": "h-12 px-5 text-xl rounded-md"
+        },
+        "theme": {
+           "common": "shadow-sm  border placeholder-opacity-40",
+           "default": "bg-white border-gray-200 hover:border-gray-300 focus:ring-2 ring-blue-400 ring-opacity-50 text-gray-700 placeholder-gray-700",
+           "disabled": "bg-gray-100 cursor-not-allowed",
+           "error": "ring-red-400 ring-opacity-50 focus:ring-2 text-red-700 placeholder-red-700 border-red-200 bg-red-50"
+        }
+     }
+  },
+  "variants": [
+     {
+        "name": "default",
+        "label": "Default style",
+        "context": {
+           "labelName": "userName",
+           "itemLabel": "Your name",
+           "placeholder": "Your name"
+        }
+     },
+     {
+        "name": "disabled",
+        "label": "Disabled style",
+        "context": {
+           "isDisabled": true,
+           "labelName": "userName",
+           "itemLabel": "Your name",
+           "placeholder": "Your name"
+        }
+     },
+     {
+        "name": "error",
+        "label": "Error style",
+        "context": {
+           "isError": true,
+           "labelName": "userName",
+           "itemLabel": "Your name",
+           "placeholder": "Your name"
+        }
+     },
+     {
+        "name": "password",
+        "label": "Password type",
+        "context": {
+           "labelName": "userPassword",
+           "itemLabel": "Your password",
+           "placeholder": "Your password",
+           "type": "password"
+        }
+     },
+     {
+        "name": "sizeSM",
+        "label": "Size small",
+        "context": {
+           "size": "small",
+           "labelName": "userName",
+           "itemLabel": "Your name",
+           "placeholder": "Your name"
+        }
+     },
+     {
+        "name": "sizeNormal",
+        "label": "Size normal",
+        "context": {
+           "labelName": "userName",
+           "itemLabel": "Your name",
+           "placeholder": "Your name"
+        }
+     },
+     {
+        "name": "sizeLG",
+        "label": "Size large",
+        "context": {
+           "size": "large",
+           "labelName": "userName",
+           "itemLabel": "Your name",
+           "placeholder": "Your name"
+        }
+     }
+  ]
+}

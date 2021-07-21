@@ -1,0 +1,4 @@
+<button
+    class=" {{classes.base}} {{classes.theme.common}} {% if isLoading %} {{classes.theme.loading}} {% elif isDisabled %} {{classes.theme.disabled}} {% else %} {{classes.theme.default}} {% endif %} {% if size =='small' %} {{classes.size.small}} {% elif size =='large' %} {{classes.size.large}} {% else %} {{classes.size.default}} {% endif %} ">
+    {{label}}
+</button>

@@ -1,0 +1,30 @@
+{% set btnClasses = [classes.base, classes.theme.common] %}
+
+{% if isBlock %}
+{% set btnClasses = (btnClasses.push(classes.block), btnClasses) %}
+{% endif %}
+
+{# SET THEME STYLES #}
+{% if isLoading %}
+{% set btnClasses = (btnClasses.push(classes.theme.loading), btnClasses) %}
+{% elif isDisabled %}
+{% set btnClasses = (btnClasses.push(classes.theme.disabled), btnClasses) %}
+{% else %}
+{% set btnClasses = (btnClasses.push(classes.theme.default), btnClasses) %}
+{% endif %}
+
+{# SET SIZE STYLES #}
+{% if size =='small' %}
+{% set btnClasses = (btnClasses.push(classes.size.small), btnClasses) %}
+{% elif size =='large' %}
+{% set btnClasses = (btnClasses.push(classes.size.large), btnClasses) %}
+{% else %}
+{% set btnClasses = (btnClasses.push(classes.size.default), btnClasses) %}
+{% endif %}
+
+{# SET RESULT CLASSES #}
+{% set btnClassesResult = (btnClasses.join(' ')) %}
+
+<button class="{{btnClassesResult}} ">
+    {{label}}
+</button>

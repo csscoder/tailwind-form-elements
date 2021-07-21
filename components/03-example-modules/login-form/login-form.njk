@@ -1,0 +1,21 @@
+<div class="flex items-center justify-center min-h-full">
+  <aside class="w-full max-w-sm p-6 m-4 transition bg-white shadow-lg rounded-2xl hover:shadow-xl">
+    <h3 class="text-2xl font-bold text-center mb-e4">Login form</h3>
+    <form action="#3">
+      <div class="mb-4 last:mb-0">
+        {% render '@input-theme1', inputs.userName, true %}
+      </div>
+      <div class="mb-4 last:mb-0">
+        {% render '@input-theme1', inputs.userPassword, true %}
+      </div>
+      <div class="flex justify-end mb-4 last:mb-0">
+        <div class="mr-4 last:mr-0">
+          {% render '@button-outlined', buttons.cancel, true %}
+        </div>
+        <div class="mr-4 last:mr-0">
+          {% render '@button-filled', buttons.success, true %}
+        </div>
+      </div>
+    </form>
+  </aside>
+</div>

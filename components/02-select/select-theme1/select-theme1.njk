@@ -1,0 +1,49 @@
+{% set selectClasses = [classes.base, classes.theme.common] %}
+{% set tailClasses = [classes.tail] %}
+
+{# SET THEME STYLES #}
+{% if isError%}
+{% set selectClasses = (selectClasses.push(classes.theme.error.select), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.theme.error.tail), tailClasses) %}
+{% elif isDisabled %}
+{% set selectClasses = (selectClasses.push(classes.theme.disabled.select), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.theme.disabled.tail), tailClasses) %}
+{% else %}
+{% set selectClasses = (selectClasses.push(classes.theme.default.select), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.theme.default.tail), tailClasses) %}
+{% endif %}
+
+{# SET SIZE STYLES #}
+{% if size =='small' %}
+{% set selectClasses = (selectClasses.push(classes.size.small.select), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.size.small.tail), tailClasses) %}
+{% elif size =='large' %}
+{% set selectClasses = (selectClasses.push(classes.size.large.select), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.size.large.tail), tailClasses) %}
+{% else %}
+{% set selectClasses = (selectClasses.push(classes.size.default.select), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.size.default.tail), tailClasses) %}
+{% endif %}
+
+{% if isBlock %}
+{% set selectClasses = (selectClasses.push(classes.block), selectClasses) %}
+{% set tailClasses = (tailClasses.push(classes.block), tailClasses) %}
+{% endif %}
+
+{# SET RESULT CLASSES #}
+{% set selectClassesResult = (selectClasses.join(' ')) %}
+{% set tailClassesResult = (tailClasses.join(' ')) %}
+
+<div class="relative mb-6 {% if isError%}inline-flex{% endif %}">
+  <label for="{{labelName}}" class="hidden">{{itemLabel}}</label>
+  <div class="{{tailClassesResult}}">
+    <select id="{{labelName}}" {%if isDisabled%}disabled{%endif%} class="{{selectClassesResult}}">
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+
+  <div class="absolute left-0 w-full pr-1 mt-1 text-xs leading-none text-right text-red-500 top-full">
+    <div {% if isError === false %} class="hidden" {% endif %}>Field is required</div>
+  </div>
+</div>
