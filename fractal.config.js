@@ -78,7 +78,7 @@ fractal.web.theme(
       },
       {
         label: 'Source',
-        value: `<a href="https://csscoder.pro" target="_blank">csscoder.pro</a>`,
+        value: `<a href="https://github.com/csscoderRU/tailwind-form-elements" target="_blank">GitHub</a>`,
       },
       {
         label: 'Created by',
